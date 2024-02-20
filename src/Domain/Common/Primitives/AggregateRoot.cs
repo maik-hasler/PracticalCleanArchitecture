@@ -3,7 +3,8 @@
 namespace Domain.Common.Primitives;
 
 public abstract class AggregateRoot<TId>
-    : Entity<TId>
+    : Entity<TId>,
+    IAggregateRoot
     where TId : struct
 {
     private readonly List<IDomainEvent> _domainEvents = [];

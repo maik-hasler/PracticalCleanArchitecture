@@ -1,3 +1,6 @@
-﻿namespace Domain.Common.Abstractions.Messaging;
+﻿using Mediator;
 
-public interface IDomainEvent;
+namespace Domain.Common.Abstractions.Messaging;
+
+public interface IDomainEvent
+    : INotification;
